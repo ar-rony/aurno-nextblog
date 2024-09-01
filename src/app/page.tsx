@@ -1,7 +1,13 @@
-import Image from "next/image";
+import Link from 'next/link'
+import CatButton from '@/components/CatButton'
+import Image from 'next/image'
 
-export default function Home() {
+const Home = () => {
   return (
-    <main className="container">Aurno Blog</main>
-  );
+    <main className="">      
+      
+    </main>
+  )
 }
+
+export default Home
