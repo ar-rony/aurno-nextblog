@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${manrope.variable} container font-mr bg-light dark:bg-dark`}>
-        <div className="flex flex-col min-h-screen px-5 sm:p-0">
+        <div className="flex flex-col min-h-screen px-5 gap-10 sm:p-0">
           <Header />
           <div className="flex-1 flex items-center">{children}</div>
           <Footer />

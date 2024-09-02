@@ -9,6 +9,7 @@ const Header = () => {
       <Logo />
       <Navbar />
       <Social />
+      <div className="cursor-pointer sm:hidden text-4xl rotate-90"> |||</div>
     </header>
   )
 } 
