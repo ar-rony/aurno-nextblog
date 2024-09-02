@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import CatButton from '@/components/CatButton'
 import Image from 'next/image'
+import PostList from "@/components/RecentPosts/PostList"
 
 const Home = () => {
   return (
@@ -53,65 +54,12 @@ const Home = () => {
       </div>
 
       {/* Recent Post */}
-      <div className="mt-14 sm:mt-20 md:px-20 flex flex-col gap-y-6  sm:gap-y-20">
-        <h2 className='text-3xl font-bold'>Recent Posts Post</h2>
-
-        <div className="grid grid-cols-1 sm:grid-col-2 md:grid-cols-3 gap-7 sm:gap-5">
-
-            
-            <div className="flex flex-col gap-5">
-              <div className="bg-[url('/blogs/code.jpg')] h-80  sm:w-full bg-cover bg bg-center rounded-lg"/>
-              <div className="flex flex-col gap-2 sm:w-4/6">
-                <Link href={"#"} className='uppercase text-sm text-accent w-max'>Code Quality</Link>
-                <h2 className='text-xl font-bold capitalize'>Best Practices for Writing Clean and Maintainable Code</h2>
-                <span className='text-gray/90'>January 02, 2023</span>
-              </div>
-            </div>
-            <div className="flex flex-col gap-5">
-              <div className="bg-[url('/blogs/code.jpg')] h-80  sm:w-full bg-cover bg bg-center rounded-lg"/>
-              <div className="flex flex-col gap-2 sm:w-4/6">
-                <Link href={"#"} className='uppercase text-sm text-accent w-max'>Code Quality</Link>
-                <h2 className='text-xl font-bold capitalize'>Best Practices for Writing Clean and Maintainable Code</h2>
-                <span className='text-gray/90'>January 02, 2023</span>
-              </div>
-            </div>
-            <div className="flex flex-col gap-5">
-              <div className="bg-[url('/blogs/code.jpg')] h-80  sm:w-full bg-cover bg bg-center rounded-lg"/>
-              <div className="flex flex-col gap-2 sm:w-4/6">
-                <Link href={"#"} className='uppercase text-sm text-accent w-max'>Code Quality</Link>
-                <h2 className='text-xl font-bold capitalize'>Best Practices for Writing Clean and Maintainable Code</h2>
-                <span className='text-gray/90'>January 02, 2023</span>
-              </div>
-            </div>
-            <div className="flex flex-col gap-5">
-              <div className="bg-[url('/blogs/code.jpg')] h-80  sm:w-full bg-cover bg bg-center rounded-lg"/>
-              <div className="flex flex-col gap-2 sm:w-4/6">
-                <Link href={"#"} className='uppercase text-sm text-accent w-max'>Code Quality</Link>
-                <h2 className='text-xl font-bold capitalize'>Best Practices for Writing Clean and Maintainable Code</h2>
-                <span className='text-gray/90'>January 02, 2023</span>
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-5">
-              <div className="bg-[url('/blogs/code.jpg')] h-80 sm:w-full bg-cover bg bg-center rounded-lg"/>
-              <div className="flex flex-col gap-2 sm:w-4/6">
-                <Link href={"#"} className='uppercase text-sm text-accent w-max'>Code Quality</Link>
-                <h2 className='text-xl font-bold capitalize'>Best Practices for Writing Clean and Maintainable Code</h2>
-                <span className='text-gray/90'>January 02, 2023</span>
-              </div>
-            </div>
-            
-            <div className="flex flex-col gap-5">
-              <div className="bg-[url('/blogs/code.jpg')] h-80 sm:w-full bg-cover bg bg-center rounded-lg"/>
-              <div className="flex flex-col gap-2 sm:w-4/6">
-                <Link href={"#"} className='uppercase text-sm text-accent w-max'>Code Quality</Link>
-                <h2 className='text-xl font-bold capitalize'>Best Practices for Writing Clean and Maintainable Code</h2>
-                <span className='text-gray/90'>January 02, 2023</span>
-              </div>
-            </div>
-
+      <div className="mt-14 sm:mt-20 md:px-20 flex flex-col gap-6  sm:gap-y-20">
+        <div className='flex items-center justify-between'>
+          <h2 className='text-3xl font-bold'>Recent Posts</h2>
+          <Link className='text-lg underline cursor-pointer hover:text-accent font-semibold' href={"#"}>View All</Link>
         </div>
-
+        <PostList />
       </div>
 
     </main>
