@@ -1,35 +1,31 @@
 [
     {
         "id": "1",
-        "title": "The Power of JavaScript Frameworks: Angular vs. React vs. Vue.js",
-        "category": "JavaScript",
+        "title": "Building Progressive Web Apps: Bridging the Gap Between Web and MobileBuilding Progressive Web Apps: Bridging the Gap Between Web and Mobile",
+        "content": "Integrating mindfulness practices helps developers cultivate present-moment awareness, fostering focus, problem-solving, and work-life balance."
+        "category": Web Development"
         "featured_img": "/blogs/1.jpg",
         "date": "January 02, 2023"
     },
     {
-        "id": "1",
-        "title": "The Power of JavaScript Frameworks: Angular vs. React vs. Vue.js",
-        "category": "JavaScript",
-        "date": "January 02, 2023"
-    },
-    {
         "id": "2",
-        "title": "The Power of JavaScript Frameworks: Angular vs. React vs. Vue.js",
-        "category": "JavaScript",
+        "title": "Mindfulness and Meditation Techniques for Developers: Improving Focus and Clarity",
+        "category": "Productivity",
         "date": "January 02, 2023"
     },
     {
         "id": "3",
-        "title": "The Power of JavaScript Frameworks: Angular vs. React vs. Vue.js",
-        "category": "JavaScript",
+        "title": "Best Practices for Writing Clean and Maintainable Code",
+        "category": "Code Quality",
         "date": "January 02, 2023"
     },
     {
         "id": "4",
-        "title": "The Power of JavaScript Frameworks: Angular vs. React vs. Vue.js",
-        "category": "JavaScript",
+        "title": "Automating Repetitive Tasks: Productivity Hacks for Developers",
+        "category": "Productivity",
         "date": "January 02, 2023"
     },
+   
     {
         "id": "5",
         "title": "The Power of JavaScript Frameworks: Angular vs. React vs. Vue.js",
