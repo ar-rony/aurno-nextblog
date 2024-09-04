@@ -30,36 +30,42 @@
         "id": "5",
         "title": "The Power of JavaScript Frameworks: Angular vs. React vs. Vue.js",
         "category": "JavaScript",
+        "featured_img": "/blogs/1.jpg",
         "date": "January 02, 2023"
     },
     {
         "id": "6",
         "title": "Mastering CSS Grid Layout: A Comprehensive Guide",
         "category": "CSS",
+        "featured_img": "/blogs/2.jpg",
         "date": "January 02, 2023"
     },
     {
         "id": "7",
         "title": "The Rise of Progressive Web Apps (PWAs): A Game Changer in Web Development",
         "category": "PWA",
+        "featured_img": "/blogs/3.jpg",
         "date": "January 02, 2023"
     },
     {
         "id": "8",
         "title": "RESTful APIs: Building Blocks of Modern Web Applications",
         "category": "Code Quality",
+        "featured_img": "/blogs/4.jpg",
         "date": "January 02, 2023"
     },
     {
         "id": "9",
         "title": "Best Practices for Web Accessibility: Building Inclusive Websites",
         "category": "Code Quality",
+        "featured_img": "/blogs/5.jpg",
         "date": "January 02, 2023"
     },
     {
         "id": "10",
         "title": "Web Accessibility: Inclusive Design for All Users",
         "category": "Code Quality",
+        "featured_img": "/blogs/6.jpg",
         "date": "January 02, 2023"
     }
     
