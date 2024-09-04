@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import React from 'react'
-import { Sun } from 'lucide-react';
 
 const links = [
     {
@@ -23,7 +22,6 @@ const Navbar = () => {
         {links.map((link)=>(
             <Link className='hover:text-accent' key={link.text} href={link.url}>{link.text}</Link>
         ))}      
-        <span><Sun /></span>  
     </nav>
   )
 }
