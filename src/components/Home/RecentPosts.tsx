@@ -40,7 +40,7 @@ const RecentPosts = ({ blogs }: any) => {
 									<Link href={`/categories/${post.tags}`}>{post.tags}</Link>
 								</span>
 								<Link href={`/blog/${post.slug}`}>
-									<h1 className="capitalize text-base font-bold font-montserrat text-gray-800">
+									<h1 className="capitalize text-base font-bold font-montserrat text-gray-800 dark:text-lime-50">
 										<span className="bg-gradient-to-r from-purple-900 to-purple-600 bg-[length:0px_3px] bg-left-bottom bg-no-repeat transition-[background-size] duration-700 group-hover:bg-[length:100%_3px]">
 											{post.title}
 										</span>

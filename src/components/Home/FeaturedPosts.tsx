@@ -66,14 +66,13 @@ const FeaturedPosts = ({ blogs }: any) => {
 							{post3.tags}
 						</span>
 						<Link href={`/blog/${post3.slug}`}>
-							<h1 className="capitalize text-lg font-bold font-montserrat text-gray-800">
+							<h1 className="capitalize text-lg font-bold font-montserrat text-gray-800 dark:text-lime-50">
 								<span className="bg-gradient-to-r from-purple-900 to-purple-600 bg-[length:0px_3px] bg-left-bottom bg-no-repeat transition-[background-size] duration-700 group-hover:bg-[length:100%_3px]">
 									{post3.title}
 								</span>
 							</h1>
 						</Link>
 						<span className="text-muted-foreground">
-							{" "}
 							{format(new Date(post3.publishedAt), "MMMM dd, yyyy")}{" "}
 						</span>
 					</div>
@@ -97,7 +96,7 @@ const FeaturedPosts = ({ blogs }: any) => {
 							{post4.tags}
 						</span>
 						<Link href={`/blog/${post3.slug}`}>
-							<h1 className="capitalize text-lg font-bold font-montserrat text-gray-800">
+							<h1 className="capitalize text-lg font-bold font-montserrat text-gray-800 dark:text-lime-50">
 								<span className="bg-gradient-to-r from-purple-900 to-purple-600 bg-[length:0px_3px] bg-left-bottom bg-no-repeat transition-[background-size] duration-700 group-hover:bg-[length:100%_3px]">
 									{post4.title}
 								</span>
