@@ -47,7 +47,6 @@ const RecentPosts = ({ blogs }: any) => {
 									</h1>
 								</Link>
 								<span className="text-muted-foreground">
-									{" "}
 									{formatDate(new Date(post.publishedAt), "MMMM dd, yyyy")}{" "}
 								</span>
 							</div>
