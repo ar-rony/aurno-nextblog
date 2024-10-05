@@ -20,7 +20,7 @@ const HomeCoverSection = ({blogs}:any) => {
           />
           <div className='z-0 absolute inset-0 bg-gradient-to-b from-transparent from-0% to-gray-900/70 rounded-3xl '/>
           <div className='w-full sm:w-3/4 z-0 p-6 sm:p-16 flex flex-col items-start justify-center text-lime-50 '>
-            <Tag link={`/categories/${post.tags}`} name={post.tags}/>
+            <Tag name={`${post.tags}`} className="text-sm sm:text-base inline-block py-2 sm:py-3 px-6 sm:px-10 bg-gray-600 text-lime-50 rounded-full capitalize font-semibold border-solid border-lime-50 border-2 hover:scale-105 transition-all ease-linear duration-200"/>
             <Link href={`/blog/${post.slug}`} className='mt-6'>
               <h1 className='capitalize text-lg sm:text-4xl font-bold font-montserrat bg-gradient-to-r from-gray-200 to-gray-100 text-transparent bg-clip-text'>
                 <span className='bg-gradient-to-r from-purple-900 to-purple-600 bg-[length:0px_5px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 group-hover:bg-[length:100%_5px]'>

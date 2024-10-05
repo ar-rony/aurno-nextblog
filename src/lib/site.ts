@@ -1,6 +1,6 @@
 export const siteConfig = {
     name: "AurnoBlog",
-    url: "https://examples.com",
+    url: "https://aurno-nextblog.vercel.app/",
     description: "AurnoBlog is a personal static blog build with Next js, tailwindcss, shadcn and velite",
     author: 'AR Rony',
     links: {

@@ -32,9 +32,8 @@ const FeaturedPosts = ({ blogs }: any) => {
 						</Link>
 						<div className="absolute bottom-0 w-full z-20 p-6 sm:p-10">
 							<Tag
-								link={`/categories/${post2.tags}`}
-								className="px-6 py-2 text-sm !border"
-								name={post2.tags}
+								className="text-sm sm:text-base inline-block py-2 sm:py-3 px-6 sm:px-10 bg-gray-600 text-lime-50 rounded-full capitalize font-semibold border-solid border-lime-50 border-2 hover:scale-105 transition-all ease-linear duration-200"
+								name={`${post2.tags}`}
 							/>
 							<Link href={`/blog/${post2.slug}`}>
 								<h1 className="capitalize text-lg sm:text-2xl font-bold font-montserrat bg-gradient-to-r from-gray-200 to-gray-100 text-transparent bg-clip-text mt-4">
@@ -46,7 +45,6 @@ const FeaturedPosts = ({ blogs }: any) => {
 						</div>
 					</div>
 				</article>
-
 				<article className="group col-span-1 row-span-1 grid grid-cols-12 gap-4 relative">
 					<Link
 						href={`/blog/${post3.slug}`}
