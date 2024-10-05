@@ -21,7 +21,7 @@ const RecentPosts = ({ blogs }: any) => {
 			<div className=" grid grid-cols-1 sm:grid-cols-3 grid-rows-2 gap-12 mt-6 sm:mt-12">
 				{sortedPosts.slice(5, 11).map((post) => {
 					return (
-						<article className="group grid gap-4 relative">
+						<article key={post.slug} className="group grid gap-4 relative">
 							<Link
 								href={`/blog/${post.slug}`}
 								className="h-full rounded-xl overflow-hidden">
