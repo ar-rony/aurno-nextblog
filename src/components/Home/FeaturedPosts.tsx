@@ -94,7 +94,7 @@ const FeaturedPosts = ({ blogs }: any) => {
 					</Link>
 					<div className="col-span-8 flex flex-col justify-center gap-2">
 						<span className="text-sm uppercase text-purple-700">
-							{post4.tags[0]}
+							{post4.tags}
 						</span>
 						<Link href={`/blog/${post3.slug}`}>
 							<h1 className="capitalize text-lg font-bold font-montserrat text-gray-800">

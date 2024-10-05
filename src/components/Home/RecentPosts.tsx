@@ -37,7 +37,7 @@ const RecentPosts = ({ blogs }: any) => {
 							</Link>
 							<div className="flex flex-col justify-center gap-2">
 								<span className="text-sm uppercase text-purple-700">
-									<Link href={post.tags[0]}>{post.tags[0]}</Link>
+									<Link href={`/categories/${post.tags}`}>{post.tags}</Link>
 								</span>
 								<Link href={`/blog/${post.slug}`}>
 									<h1 className="capitalize text-base font-bold font-montserrat text-gray-800">
