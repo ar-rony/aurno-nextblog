@@ -25,13 +25,9 @@ export const metadata: Metadata = {
   description: "Aurno blog app is a static blog app created with next js, tailwindcss and markdown",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({children}: {children: React.ReactNode;}) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={cn("font-inter antialiased", montserrat.variable, inter.variable)}>
         <Providers>
           <div className=" relative grid grid-rows-[auto_1fr_auto] min-h-dvh bg-background ">

@@ -4,7 +4,7 @@ import { slug } from 'github-slugger'
 
 interface TagProps{
   name: string;
-  link?: boolean;
+  link?: string;
   className?: string;
 }
 

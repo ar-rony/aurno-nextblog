@@ -12,7 +12,7 @@ const MainNav = () => {
     return (
     <nav className='flex items-center space-x-4 lg:space-x-6'>
         <Link href={'/'} className='mr-6 flex items-center space-x-3'>
-            <Icons.logo className='w-6 h-6'/>
+            <Icons.logo className='w-6 h-6 text-blue-300'/>
             <span className=" font-montserrat text-2xl">{siteConfig.name}</span>
         </Link>
         <Link href="/blog"  className={cn("text-sm  font-medium transition-colors hover:text-primary hidden sm:inline-block", pathname === "/blog" ? "text-foreground" : "text-foreground/60")}>Blog</Link>

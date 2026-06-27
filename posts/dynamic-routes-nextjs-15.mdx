@@ -1,0 +1,83 @@
+---
+title: "Building Dynamic Routes in Next.js 15"
+slug: "dynamic-routes-nextjs-15"
+description: "Learn how to create dynamic routes in Next.js 15 for flexible and scalable applications."
+image: "../public/blogs/1.jpg"
+tags: ["Next.js", "Routing", "Web Development", "Dynamic Routes"]
+publishedAt: "2025-03-19"
+updatedAt: "2025-03-19"
+---
+
+## Introduction
+Dynamic routing is an essential feature of Next.js that allows developers to create flexible and scalable applications. With Next.js 15, routing has been further optimized for performance and developer experience.
+
+## What Are Dynamic Routes?
+Dynamic routes allow you to create pages with variable paths. Instead of manually defining each route, you can use dynamic route segments to generate pages dynamically.
+
+## Creating a Dynamic Route
+### Step 1: Define a Dynamic Route File
+In Next.js, dynamic routes are created using square brackets in the file name. For example:
+```plaintext
+/pages/product/[id].js
+```
+This allows us to access the route `/product/123`, `/product/456`, etc.
+
+### Step 2: Fetch Data Based on the Dynamic Parameter
+Inside `[id].js`, we can retrieve the dynamic parameter using `useRouter()` from Next.js:
+```javascript
+import { useRouter } from 'next/router';
+
+export default function ProductPage() {
+  const router = useRouter();
+  const { id } = router.query;
+
+  return (
+    <div>
+      <h1>Product ID: {id}</h1>
+      <p>Details about product {id} will be displayed here.</p>
+    </div>
+  );
+}
+```
+### Step 3: Using `getStaticProps` and `getStaticPaths`
+For static generation, you need `getStaticProps` and `getStaticPaths` to pre-render pages.
+
+```javascript
+export async function getStaticPaths() {
+  const products = await fetch('https://api.example.com/products').then(res => res.json());
+  const paths = products.map(product => ({ params: { id: product.id.toString() } }));
+
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps({ params }) {
+  const product = await fetch(`https://api.example.com/products/${params.id}`).then(res => res.json());
+  
+  return { props: { product } };
+}
+
+export default function ProductPage({ product }) {
+  return (
+    <div>
+      <h1>{product.name}</h1>
+      <p>{product.description}</p>
+    </div>
+  );
+}
+```
+### Explanation:
+- `getStaticPaths()`: Defines all possible dynamic routes.
+- `getStaticProps()`: Fetches data for each page at build time.
+
+## Dynamic API Routes
+Next.js also supports dynamic API routes using a similar approach:
+```javascript
+// pages/api/product/[id].js
+export default function handler(req, res) {
+  const { id } = req.query;
+  res.status(200).json({ message: `You requested product ${id}` });
+}
+```
+
+## Conclusion
+Dynamic routes in Next.js 15 provide a powerful way to handle flexible URLs and dynamic data fetching. By using `getStaticProps`, `getStaticPaths`, and API routes, you can create efficient, scalable applications. Start implementing dynamic routes in your Next.js projects today!

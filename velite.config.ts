@@ -1,9 +1,24 @@
-import { defineConfig, defineCollection, s} from 'velite';
+import { defineConfig, defineCollection, s } from 'velite';
 
-const computedFields = <T extends { slug: string }>(data: T) => ({
+const normalizeSlug = (value: string) =>
+  value
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/[^a-z0-9\-/]+/g, '')
+    .replace(/--+/g, '-')
+    .replace(/(^-|-$)/g, '');
+
+const computedFields = <T extends { slug: string }>(data: T) => {
+  const slug = normalizeSlug(data.slug);
+  const slugAsParams = slug.replace(/^\/+/, '');
+
+  return {
     ...data,
-    slugAsParams: data.slug.split("/").slice(1).join("/"),
-})
+    slug,
+    slugAsParams,
+  };
+};
 
 const posts = defineCollection({
     name: 'Post', // collection type name
@@ -12,7 +27,7 @@ const posts = defineCollection({
         slug: s.path(),
         title: s.string().max(99),
         description: s.string().max(9999).optional(),
-        tags:s.array(s.string()).optional(),
+        tags: s.array(s.string()).optional(),
         image: s.image(),
         publishedAt: s.isodate(),
         updatedAt: s.isodate(),
